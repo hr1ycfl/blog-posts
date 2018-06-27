@@ -15,6 +15,7 @@ script:
   - git checkout master
   - cd ../
   - mv .posts_git/* .source_git/source/_posts/
+  - rm -rf .posts_git
   - git config usre.name "O'Neal"
   - git config user.email "1900427303@qq.com"
   - git add .source_git/*
