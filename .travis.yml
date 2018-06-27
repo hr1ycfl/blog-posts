@@ -17,7 +17,7 @@ script:
   - mv .posts_git/* .source_git/source/_posts/
   - git config usre.name "O'Neal"
   - git config user.email "1900427303@qq.com"
-  - git add .  
+  - git add .source_git/*
   - git commit -m "Travis CI Auto push posts at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
   - git push --force --quiet "https://${GHToken}@${SOURCE_REF}" master:master  #Travis_Token是在Travis中配置环境变量的名称
 
