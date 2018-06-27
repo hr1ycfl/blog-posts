@@ -1,1 +1,39 @@
-language: LANG
+language: node_js
+
+node_js: stable
+
+before_install:
+    - export TZ='Asia/Shanghai' # 更改时区
+
+script:
+  - git clone https://${POSTS_REF} .posts_git  # GH_REF是最下面配置的仓库地址
+  - cd .posts_git
+  - git checkout master
+  - cd ../
+  - git clone https://${SOURCE_REF} .source_git
+  - cd .source_git
+  - git checkout master
+  - cd ../
+  - mv .posts_git/* .source_git/source/_posts/
+  - git config usre.name "O'Neal"
+  - git config user.email "1900427303@qq.com"
+  - git add .  
+  - git commit -m "Travis CI Auto push posts at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
+  - git push --force --quiet "https://${GHToken}@${SOURCE_REF}" master:master  #Travis_Token是在Travis中配置环境变量的名称
+
+branches:
+  only:
+    - master  #只监测master分支，master是我的分支的名称，可根据自己情况设置
+env:
+ global:
+   - POSTS_REF: github.com/hr1ycfl/blog-posts.git  #设置GH_REF，注意更改yourname
+   - SOURCE_REF: github.com/hr1ycfl/blog-test.git  #设置GH_REF，注意更改yourname
+
+# configure notifications (email, IRC, campfire etc)
+# please update this section to your needs!
+# https://docs.travis-ci.com/user/notifications/
+notifications:
+  email:
+    - oneal.wang@foxmail.com
+  on_success: change
+  on_failure: always
