@@ -7,13 +7,7 @@ before_install:
 
 script:
   - git clone https://${POSTS_REF} .posts_git  # GH_REF是最下面配置的仓库地址
-  - cd .posts_git
-  - git checkout master
-  - cd ../
   - git clone https://${SOURCE_REF} .source_git
-  - cd .source_git
-  - git checkout master
-  - cd ../
   - mv .posts_git/* .source_git/source/_posts/
   - rm -rf .posts_git
   - git config usre.name "O'Neal"
