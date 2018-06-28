@@ -7,7 +7,7 @@ before_install:
 
 script:
   - git clone https://${POSTS_REF} .posts_git  # GH_REF是最下面配置的仓库地址
-  - rm -rf .posts_git/source/_posts/README.md
+  - rm -rf .posts_git/README.md
   - git clone https://${SOURCE_REF} .source_git
   - mv .posts_git/* .source_git/source/_posts/
   - rm -rf .posts_git
