@@ -7,12 +7,14 @@ before_install:
 
 script:
   - git clone https://${POSTS_REF} .posts_git  # GH_REF是最下面配置的仓库地址
+  - rm -rf .posts_git/source/_posts/README.md
   - git clone https://${SOURCE_REF} .source_git
   - mv .posts_git/* .source_git/source/_posts/
   - rm -rf .posts_git
+  - cd .source_git
   - git config usre.name "O'Neal"
   - git config user.email "1900427303@qq.com"
-  - git add .source_git/*
+  - git add ./*
   - git commit -m "Travis CI Auto push posts at `date +"%Y-%m-%d %H:%M"`"  # 提交记录包含时间 跟上面更改时区配合
   - git push --force --quiet "https://${GHToken}@${SOURCE_REF}" master:master  #Travis_Token是在Travis中配置环境变量的名称
 
