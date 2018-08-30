@@ -4,8 +4,7 @@ href: '2018-07-30-java-design-pattern'
 categories: 后端
 date: 2018-07-30 17:29:16
 tags:
-  - Java
-  - 设计模式
+  - Java设计模式
 keywords: Java, 设计模式
 ---
 一直需要的Java的设计模式.
