@@ -10,6 +10,22 @@ keywords: Java, 设计模式, 单例模式, Singleton
 一个类有且仅有一个实例，并且提供了一个全局的访问点
 <!--more-->
 # 概述
+```java
+public class Singleton {
+
+    private static Singleton uniqueInstance;
+
+    private Singleton() {
+    }
+
+    public static Singleton getUniqueInstance() {
+        if (uniqueInstance == null) {
+            uniqueInstance = new Singleton();
+        }
+        return uniqueInstance;
+    }
+}
+```
 
 # 优点
 
