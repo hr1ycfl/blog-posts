@@ -1,5 +1,5 @@
 ---
-title: 'Taro介绍'
+title: 'Taro'
 href: '2018-09-26-taro-c1'
 categories: 前段
 date: 2018-09-26 10:43:41
