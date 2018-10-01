@@ -1,7 +1,7 @@
 ---
 title: 'Taro'
 href: '2018-09-26-taro-c1'
-categories: 前段
+categories: 前端
 date: 2018-09-26 10:43:41
 tags:
   - Taro
