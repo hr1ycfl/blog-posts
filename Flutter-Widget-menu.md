@@ -15,7 +15,7 @@ keywords: App, IOS, Android, Flutter
 ### 类
 
 #### AbsorbPointer
-> 在命中测试期间吸收指针的widget。[...]
+在命中测试期间吸收指针的widget。[...]
 
 #### align
 一个widget，用于将其子项与其自身对齐，并根据子级的大小自行调整大小。[...]
