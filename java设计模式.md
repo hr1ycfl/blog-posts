@@ -10,6 +10,7 @@ keywords: Java, 设计模式
 一直需要的Java的设计模式.
 <!--more-->
 
+测试
 > 作者：[CyC2018](https://github.com/CyC2018)
 > 原文链接: [设计模式](https://cyc2018.gitbooks.io/interview-notebook/content/notes/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html)
 
