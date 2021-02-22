@@ -24,7 +24,7 @@ branches:
 env:
  global:
    - POSTS_REF: github.com/hr1ycfl/blog-posts.git  #设置GH_REF，注意更改yourname
-   - SOURCE_REF: github.com/hr1ycfl/blog-source.git  #设置GH_REF，注意更改yourname
+   - SOURCE_REF: github.com/hr1ycfl.github.io.git  #设置GH_REF，注意更改yourname
 
 # configure notifications (email, IRC, campfire etc)
 # please update this section to your needs!
